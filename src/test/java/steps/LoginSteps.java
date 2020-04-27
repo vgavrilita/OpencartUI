@@ -33,41 +33,12 @@ public class LoginSteps extends BaseUtil {
         dropdown.Dropdown();
         dropdown.LoginElementDropDown();
 
-
-      /*  WebElement element= base.Driver.findElement(By.name("dropdown open"));
-        Select select = new Select(element);
-        select.selectByVisibleText("Login");
-
-       */
-       /* @FindBy(xpath = "//div[@id='top-links']/ul/li[2]/a")
-        private WebElement myAccountLocator;
-
-        @FindBy(xpath = "//div[@id='top-links']/ul/li[2]/ul/li[2]/a")
-        private WebElement loginLocator;
-*/
-
-        /*
-        base.Driver.findElement(By.cssSelector(".fa-user")).click();
-        base.Driver.findElement(By.xpath("//a[text()='Login']")).click();
-*/
-      /*  WebDriverWait wait = new WebDriverWait(base.Driver,30);
-        WebElement element= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='top-links']/ul/li[2]/ul/li[2]/a")));
-
-        */
-/*
-        WebElement element1= base.Driver.findElement(By.xpath("//div[@id='top-links']/ul/li[2]/ul/li[2]/a"));
-        element1.click();
-*/
     }
 
     @And("User enter valid username as {string} and password as {string}")
     public void userEnterValidUsernameAsAndPasswordAs(String username, String password) {
         LoginPage page = new LoginPage(base.Driver);
         page.Login(username, password);
-       /*
-        base.Driver.findElement(By.id("input-email")).sendKeys(username);
-        base.Driver.findElement(By.id("input-password")).sendKeys(password);
-        */
 
     }
 
@@ -77,9 +48,6 @@ public class LoginSteps extends BaseUtil {
         LoginPage page = new LoginPage(base.Driver);
         page.clickLogin();
 
-        /* base.Driver.findElement(By.xpath("//input[@value='Login']")).click();
-
-         */
     }
 
     @Then("User is logged into account")
@@ -98,7 +66,6 @@ public class LoginSteps extends BaseUtil {
         LoginPage page = new LoginPage(base.Driver);
         page.Login(username, password);
         /*
-        Map<String ,String> data=;
         List<List<String>> data = table.asLists();
         List<User> users= new ArrayList<User>();
         for (User user : users) {
